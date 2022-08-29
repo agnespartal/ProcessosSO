@@ -47,7 +47,7 @@ public class RedesController {
 			} 
 				
 			} if (so.contains("Linux"));{
-				processo = "IFCONFIG";
+				processo = "ifconfig";
 				try {
 					Process p = Runtime.getRuntime().exec(processo);
 					InputStream fluxo = p.getInputStream();
@@ -116,10 +116,10 @@ public class RedesController {
 			
 				String line = buffer.readLine();
 				while (line != null) {
-					if(line.contains("Aproximar")) {
+					if(line.contains("pacotes")) {
 						line = buffer.readLine();
-						String [] linha = line.split(",");
-						System.out.println(linha[2]);
+						String [] linha = line.split("/");
+						System.out.println(linha[5]);
 					}
 					line = buffer.readLine();
 				}
