@@ -9,8 +9,6 @@ public class Main {
 	public static void main(String[] args) {
 		RedesController processControl = new RedesController();
 		
-		String so = processControl.os();
-		System.out.println(so);
 		String processo = "IPCONFIG";
 		String pong =  "PING -4 -n 10 www.google.com.br";
 		
@@ -20,10 +18,10 @@ public class Main {
 			
 			switch (opc){
 				case 1: 
-					processControl.ip(so, processo);
+					processControl.ip(processo);
 					break;
 				case 2: 
-					processControl.ping(pong, so);
+					processControl.ping(pong);
 					break;
 				case 9: 
 					JOptionPane.showMessageDialog(null, "Programa Finalizado");
